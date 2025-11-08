@@ -7,6 +7,8 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 //declaración de variables
         int num = 0;
+        boolean isPrimo = true;
+
 //inicio del bucle
         while (num != -1) {
 
@@ -17,16 +19,21 @@ public class Main {
             //si el número es divisible por 1 o por sí mismo.
             if (num < 2) {
                 System.out.println("El número no es primo");
+                isPrimo = false;
             } else {
-                for (int i = 2; i <= num; i++) {
+                for (int i = 2; i <= Math.sqrt(num); i++) {
                     if (num % i == 0) {
-                        System.out.println("El número es primo.");
-                    } else {
-                        System.out.println("El número no es primo");
+                        isPrimo = false;
                     }
                 } //fin for
-            }
+                if (isPrimo == true) {
+                    System.out.println("El número es primo.");
 
+                } else {
+                    System.out.println("El número no es primo");
+                }
+            }
+            isPrimo = true;
         }//fin While
         System.out.println("Fin del programa");
     }
