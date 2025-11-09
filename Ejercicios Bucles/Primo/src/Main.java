@@ -1,7 +1,7 @@
 //Programa que lee un numero entero y positivo y nos indica si es primo o no.
 
 import java.util.Scanner;
-
+import java.lang.Math;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
