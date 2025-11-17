@@ -1,0 +1,36 @@
+[33mcommit 11267e494b6a8e8774287c23c8c754b0e86d907a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sandra <sbuenogil@gmail.com>
+Date:   Sun Nov 9 18:49:32 2025 +0100
+
+    Creacion carpeta Ejercicios String y subida de ejercicios
+
+[33mcommit f528c5eb95b91b8a1bcbc65d55c17badfd5eedf8[m
+Author: Sandra <sbuenogil@gmail.com>
+Date:   Sat Nov 8 22:48:06 2025 +0100
+
+    Subida ejercicio Factorial
+
+[33mcommit 59fd91750aaa03c46edd32f53e3029e8b9e2629c[m
+Author: Sandra <sbuenogil@gmail.com>
+Date:   Sat Nov 8 18:49:02 2025 +0100
+
+    Actualización ejercicios bucles 1
+
+[33mcommit 487b848c6214c043444dd28144b983372241ee3d[m
+Merge: 13d4ece 5b8b818
+Author: Sandra <sbuenogil@gmail.com>
+Date:   Fri Nov 7 20:15:07 2025 +0100
+
+    Merge branch 'main' of https://github.com/SandraBuenoGil/programacions
+
+[33mcommit 13d4ecefa947db63a9da71e8e9435fc9a0349088[m
+Author: Sandra <sbuenogil@gmail.com>
+Date:   Fri Nov 7 20:05:01 2025 +0100
+
+    Creacion repositorio programacions en el sobremesa
+
+[33mcommit 5b8b818521155311f74339d0c591c921c140363a[m
+Author: Sandra Bueno <sbuenogil@gmail.com>
+Date:   Fri Nov 7 20:00:31 2025 +0100
+
+    Initial commit
