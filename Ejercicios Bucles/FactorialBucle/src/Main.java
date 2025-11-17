@@ -3,11 +3,12 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
         //Declaración de variables
-        int numInt, factorial = 0;
+        int numInt, factorial = 1;
 
         //Comienzo del bucle
         do {
@@ -18,7 +19,10 @@ public class Main {
                 factorial = 1;
                 for (int cont = 1; cont <= numInt; cont++){
                     factorial = factorial * cont;
+
+
                 }
+
                 System.out.println("El factorial de " + numInt + " es: " + factorial);
         //Si es menor que -1 dice que hay un error
             } else if (numInt < -1) {

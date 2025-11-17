@@ -1,4 +1,5 @@
-//Programa que lee un numero entero y positivo y nos indica si es primo o no.
+//Programa que lee un numero entero y positivo y nos indica
+// si es primo o no.
 
 import java.util.Scanner;
 import java.lang.Math;
@@ -6,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 //declaración de variables
-        int num = 0;
+        int num = 0, i;
         boolean isPrimo = true;
 
 //inicio del bucle
@@ -21,10 +22,12 @@ public class Main {
                 System.out.println("El número no es primo");
                 isPrimo = false;
             } else {
-                for (int i = 2; i <= Math.sqrt(num); i++) {
+                i=2;
+                while(i <= Math.sqrt(num) && isPrimo==true) {
                     if (num % i == 0) {
                         isPrimo = false;
                     }
+                    i++;
                 } //fin for
                 if (isPrimo == true) {
                     System.out.println("El número es primo.");
