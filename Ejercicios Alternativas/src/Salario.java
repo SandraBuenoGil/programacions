@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EjercicioComun21 {
+public class Salario {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
@@ -18,9 +18,9 @@ public class EjercicioComun21 {
         System.out.println("Introduce precio por horas: ");
         precioporhora = entrada.nextFloat();
 
-        //declaración de valor de la variables
+        //declaración de valor de las variables
         horasextra = horas - 35;
-        sbhe = (float) ((horasextra * precioporhora) * 1.5);
+        sbhe = (horasextra * precioporhora) * 1.5f;
 
         sueldobase = horas * precioporhora + sbhe;
 
@@ -28,7 +28,7 @@ public class EjercicioComun21 {
         //calculo salario base
         if (horas<=35) {
             salariobruto = sueldobase;
-        } else  {
+        } else {
             salariobruto = sueldobase + sbhe;
         }
 
@@ -36,9 +36,9 @@ public class EjercicioComun21 {
         if (salariobruto<=500) {
             impuesto = 0;
         } else if (salariobruto>=900) {
-            impuesto = (float) ((salariobruto * 0.25) - salariobruto);
+            impuesto = (salariobruto * 0.25f) - salariobruto;
         } else {
-            impuesto = (float) ((salariobruto * 0.45) - salariobruto);
+            impuesto = (salariobruto * 0.45f) - salariobruto;
         }
         sueldoneto = salariobruto - impuesto;
         System.out.println("Sueldo bruto: " +salariobruto);
@@ -46,7 +46,8 @@ public class EjercicioComun21 {
         System.out.println("Sueldo neto: " +sueldoneto);
     }
 }
-//Programa que calcula el salario neto semanal de un trabajador en función del número de horas
+//Programa que calcula el salario neto semanal de un trabajador en función
+// del número de horas
 // trabajadas y la tasa de impuestos de acuerdo a las siguientes hipótesis:
 //
 //Las primeras 35 horas se pagan a tarifa normal.

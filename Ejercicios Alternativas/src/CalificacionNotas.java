@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EjercicioComun18 {
+public class CalificacionNotas {
     public static void main(String[] args) {
 
         Scanner entrada=new Scanner(System.in);
