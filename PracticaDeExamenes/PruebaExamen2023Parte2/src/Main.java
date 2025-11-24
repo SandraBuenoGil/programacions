@@ -40,7 +40,7 @@ public class Main {
 
             //petición HORAS
             System.out.println("Introduce primero las horas y después los minutos. \n" +
-                    "Horas (24h): \n");
+                    "Horas (24h): ");
             horas = numeros.nextInt();
 
             //aseguramos que la hora sea correcta
@@ -101,7 +101,7 @@ public class Main {
                 }
 
                 //calculo del caso b
-            } else if (pais == 'b') {
+            } else {
                 horas -= 8;
 
                 if (horas < 0) {
@@ -141,7 +141,7 @@ public class Main {
                     break;
             }
 
-            System.out.println("horas= " + horas + " minutos= " + minutos + " dia= " + dia);
+            System.out.println(dia + " " + horas + ":" + minutos);
 
             System.out.println("Quiere consultar otra hora? s/n");
             salir = letras.nextLine().toLowerCase().charAt(0);

@@ -48,9 +48,8 @@ public class Main {
 
                         if (notas >= 5 && notas <= 10) {
                             aprobados++;
-                        } else if (notas < 5 && notas >= 0) {
-                            suspensos++;
                         } else {
+                            suspensos++;
                         }
                     }
                     //Comprobación de aprobados y suspendidos
@@ -76,7 +75,7 @@ public class Main {
                     } while (otro != 's' && otro != 'n');
 
                 } while (otro != 'n');
-            } else if (salir == 'b'){
+            } else if (salir == 'b') {
                 //MENU B: Bucle para introdcir miembros de la familia hasta que se diga fin
                 do {
                     System.out.println("Nombre:");
@@ -86,17 +85,14 @@ public class Main {
 
                     //Hacemos los descuentos para cada edad y acumulamos el precio
                     if (edad <= 3) {
-                        total = precio - precio;
+                        total = 0;
                         acum = acum + total;
-                        System.out.println(total);
                     } else if (edad < 14) {
                         total = (float) (precio - (precio * 0.40));
                         acum = acum + total;
-                        System.out.println(total);
                     } else if (edad < 25) {
                         total = (float) (precio - (precio * 0.30));
                         acum = acum + total;
-                        System.out.println(total);
                     } else if (edad >= 60) {
 
                         //preguntamos el día para calcular el desuento de ancianos
@@ -136,21 +132,22 @@ public class Main {
                         System.out.println(total);
                     }
 
-                    do {
-                        //Preguntamos si va a introducirse otro grupo y no aseguramos que conteste s/n
-                        System.out.println("Quiere introducir otro familiar s/n?");
-                        otro = letras.nextLine().toLowerCase().charAt(0);
+                    //Preguntamos si va a introducirse otro grupo y no aseguramos que conteste s/n
+                    System.out.println("Quiere introducir otro familiar s/n?");
+                    otro = letras.nextLine().toLowerCase().charAt(0);
 
-                        if (otro != 's' && otro != 'n') {
-                            System.out.println("Error. Por favor, introduce 's' para sí o 'n' para no.");
-                        }
-                    } while (otro != 's' && otro != 'n');
+                    while (otro != 's' && otro != 'n') {
+                        System.out.println("Error. Por favor, introduce 's' para sí o 'n' para no.");
+                        otro = letras.nextLine().toLowerCase().charAt(0);
+                    }
 
                 } while (otro != 'n');
 
                 //total de los billetes
                 System.out.println("Total a pagar: " + acum);
 
+                //resetemos el contador
+                acum = 0;
             }
         } while (salir != 'c');
         System.out.println("Fin del programa.");
