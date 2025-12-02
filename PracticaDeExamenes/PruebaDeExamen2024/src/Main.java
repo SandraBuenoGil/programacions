@@ -21,19 +21,24 @@ public class Main {
                 System.out.println("Introduce la edad: ");
                 edad = numero.nextInt();
 
+                //aseguramos que la edad sea corrects
+                while (edad < 0 || edad > 150) {
+                    System.out.println("Error. Introduce una edad correcta.");
+                    edad = numero.nextInt();
+                }
 //Hacemos los descuentos para cada edad y acumulamos el precio
                 if (edad <= 3) {
-                    total = precio - precio;
+                    total = 0;
                     acum = acum + total;
-                    System.out.println(total);
+
                 } else if (edad < 14) {
                     total = (float) (precio - (precio * 0.40));
                     acum = acum + total;
-                    System.out.println(total);
+
                 } else if (edad < 25) {
                     total = (float) (precio - (precio * 0.30));
                     acum = acum + total;
-                    System.out.println(total);
+
                 } else if (edad >= 60) {
 //preguntamos el día para calcular el desuento
                     System.out.println("Introduce el día de la semana: \n" +
@@ -60,16 +65,13 @@ public class Main {
                     } else if (dia <= 5 && dia > 0) {
                         total = (float) (precio - (precio * 0.25));
                         acum = acum + total;
-                        System.out.println(total);
                     } else if (dia <= 7) {
                         total = (float) (precio - (precio * 0.45));
                         acum = acum + total;
-                        System.out.println(total);
                     }
                 } else {
                     total = precio;
                     acum = acum + total;
-                    System.out.println(total);
                 }
                 System.out.println("Quiere introducir otro familiar?");
                 otro = letras.nextLine().charAt(0);
