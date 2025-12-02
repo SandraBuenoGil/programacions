@@ -22,7 +22,7 @@ public class Main {
     }
 
     //Aquí es un metodo para pedir la edad.
-    public static int leerLaEdad() {
+    public static void leerLaEdad() {
         Scanner numeros = new Scanner(System.in);
 
         int edad;
