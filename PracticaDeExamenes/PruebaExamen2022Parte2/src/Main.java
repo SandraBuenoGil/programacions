@@ -181,6 +181,7 @@ public class Main {
                         salir = letras.nextLine().toLowerCase().charAt(0);
                     }
                 } while (salir != 'n');
+            }
                 /*La opción 2: La entrada al museo se calcula por grupo, y depende de la edad y de si
 tiene algún descuento.
 • Precio general 15,00 euros.
@@ -193,7 +194,7 @@ Posibles descuentos:
 Se quiere averiguar el coste total para un grupo.
 El control del número de miembros del grupo os lo dejo a vuestra elección.*/
 
-            } else if (opcion == 'b') {
+             else if (opcion == 'b') {
                 //MENU B: Bucle para introdcir miembros del grupo hasta que se diga fin
                 do {
                     System.out.println("Descuentos:  \n" +
@@ -261,7 +262,7 @@ El control del número de miembros del grupo os lo dejo a vuestra elección.*/
                 //total de los billetes
                 System.out.println("Total a pagar: " + acum);
             }
-            
+
         } while (opcion != 'c');
         System.out.println("Fin del programa.");
     }
