@@ -10,21 +10,22 @@ public class Main {
         Scanner scLetras = new Scanner(System.in);
 
         //Declaración de variables
-        String cliente = "", pedido = "", producto = "", salir;
+        String cliente = "", pedido = "", producto = "", masClientes;
         int cantidad, pago = 0, gastoEnvio;
         float precio, descuento, costeTotal;
 
         //bucle para pedir datos hasta que se quiera salir
         do {
 
-            // peticion y calculo de los datos mediante métodos
+            // PETICION DE DATOS
+            //numero de pedido (llamo al método y se inicializa en la variable)
             pedido = numPedido(pedido);
-
+            //nombre del cliente (llamo al método y se inicializa en la variable)
             cliente = nombreCliente(cliente);
-
+            //nombre del producto
             System.out.println("Introduce el nombre del producto");
             producto = scLetras.nextLine();
-
+            //precio unitario
             System.out.println("Introduce el precio unitario del producto");
             precio = sc.nextFloat();
             //comprobamos que el precio se mayor que 0
@@ -33,7 +34,7 @@ public class Main {
                         "Introduce el precio unitario del producto");
                 precio = sc.nextFloat();
             }
-
+            //canitdd del producto
             System.out.println("Introduce la cantidad");
             cantidad = sc.nextInt();
             //comprbamos que la cantidad sea mayor a 0
@@ -42,13 +43,13 @@ public class Main {
                         "Introduce la cantidad");
                 cantidad = sc.nextInt();
             }
-
+            //forma de pago (llamo al método y se inicializa en la variable)
             pago = formaPago(pago);
 
             //calculo del coste total
             costeTotal = precio * cantidad;
 
-            //inicializo la variable con el método
+            //inicializo las variable con el método para guardar el resultado del metodo en la variable
             descuento = aplicaDescuento(pago);
             gastoEnvio = calculaGastosEnvio(costeTotal);
             costeTotal = calculaImporteTotal(costeTotal, descuento, gastoEnvio);
@@ -66,15 +67,14 @@ public class Main {
 
             //pregunta si se desea otro cliente
             System.out.println("Quieres procesar más clientes? (si/no)");
-            salir = scLetras.nextLine();
-
-            //comprobamos que la respuesta no sea erronea
-            while (!salir.equalsIgnoreCase("si") && !salir.equalsIgnoreCase("no")) {
+            masClientes = scLetras.nextLine();
+            //comprobamos que la respuesta sea correcta
+            while (!masClientes.equalsIgnoreCase("si") && !masClientes.equalsIgnoreCase("no")) {
                 System.out.println("Error. Escribe si/no");
-                salir = scLetras.nextLine();
+                masClientes = scLetras.nextLine();
             }
 
-        } while (salir.equalsIgnoreCase("si"));
+        } while (masClientes.equalsIgnoreCase("si"));
         System.out.println("Saliendo...");
     }
 
