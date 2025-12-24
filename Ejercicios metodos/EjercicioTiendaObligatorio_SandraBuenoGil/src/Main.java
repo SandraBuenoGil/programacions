@@ -3,6 +3,8 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.*;
 
+/* SANDRA BUENO GIL */
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -28,7 +30,7 @@ public class Main {
             //precio unitario
             System.out.println("Introduce el precio unitario del producto");
             precio = sc.nextFloat();
-            //comprobamos que el precio se mayor que 0
+            //comprobamos que el precio sea mayor que 0
             while (precio < 0) {
                 System.out.println("El precio debe ser un número decimal mayor a 0 \n" +
                         "Introduce el precio unitario del producto");
@@ -46,15 +48,15 @@ public class Main {
             //forma de pago (llamo al método y se inicializa en la variable)
             pago = formaPago(pago);
 
-            //calculo del coste total
+            //cálculo del coste total
             costeTotal = precio * cantidad;
 
-            //inicializo las variable con el método para guardar el resultado del metodo en la variable
+            //inicializo las variables con el método para guardar el resultado del método en la variable
             descuento = aplicaDescuento(pago);
             gastoEnvio = calculaGastosEnvio(costeTotal);
             costeTotal = calculaImporteTotal(costeTotal, descuento, gastoEnvio);
 
-            //devolucion de los datos
+            //devolución de los datos
             System.out.println("Número del pedido: " + pedido);
             System.out.println("Nombre del cliente: " + cliente);
             System.out.println("Producto: " + producto);
@@ -84,8 +86,8 @@ public class Main {
     public static String numPedido(String pedido) {
         Scanner scLetras = new Scanner(System.in);
 
-        //peticion del número
-        System.out.println("Introduce el número del pedido");
+        //petición del número
+        System.out.println("Introduce el número del pedido:");
         pedido = scLetras.nextLine().trim();
 
         //se establece el patrón y se compara
@@ -94,7 +96,8 @@ public class Main {
 
         //mientras no coincida con el patron se pide de nuevo
         while (!matchPatron.matches()) {
-            System.out.println("Formato incorrecto, intentelo de nuevo");
+            System.out.println("Formato incorrecto. El formato debe ser xxxx-xxxx. \n" +
+                    "Introduce el número del pedido:");
             pedido = scLetras.nextLine().trim();
             //para que vuelva a compararlo y no quede en bucle infinito se vuelve a poner el matcher
             matchPatron = patronPedido.matcher(pedido);
@@ -107,7 +110,7 @@ public class Main {
         Scanner scLetras = new Scanner(System.in);
 
         //peticion de nombre
-        System.out.println("Introduce el nombre del cliente");
+        System.out.println("Introduce el nombre del cliente:");
         cliente = scLetras.nextLine();
 
         return cliente;
@@ -141,7 +144,7 @@ public class Main {
         //declaracion de variable
         float descuento = 0;
 
-        //switch para aplicar el descuento segun el metodo de pago
+        //switch para aplicar el descuento según el método de pago
         switch (pago) {
             case 1:
                 descuento = 0.05f;
